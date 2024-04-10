@@ -1,10 +1,14 @@
 version: '3.1'
 
+networks:
+  wordpress_net:
+    driver: bridge
+
 services:
   wordpress:
     image: wordpress:latest
-    ports:
-      - "8000:80"
+    # ports:
+    #   - "8000:80"
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wordpress
@@ -19,6 +23,8 @@ services:
       - wordpress_data:/var/www/html
     depends_on:
       - db
+    networks:
+      - wordpress_net
 
   nginx:
     image: nginx:alpine
@@ -32,6 +38,8 @@ services:
       - wordpress
     links:
       - wordpress
+    networks:
+      - wordpress_net
 
   db:
     image: mariadb:latest
@@ -42,6 +50,8 @@ services:
       MYSQL_PASSWORD: wordpress
     volumes:
       - db_data:/var/lib/mysql
+    networks:
+      - wordpress_net
 
 volumes:
   wordpress_data:
