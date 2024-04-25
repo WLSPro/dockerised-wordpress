@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Rockwell Extra Bold';
+    src: url('../fonts/Rockwell-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Rockwell-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
