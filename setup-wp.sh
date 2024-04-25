@@ -8,7 +8,7 @@ done
 
 wp core download --allow-root --path=/var/www/html
 
-wp config create --dbname=wordpress --dbuser=wordpress --dbpass=wordpress --dbhost=db --allow-root --extra-php <<PHP
+wp config create --dbname=$WORDPRESS_DB_NAME --dbuser=$WORDPRESS_DB_USER --dbpass=$WORDPRESS_DB_PASSWORD --dbhost=$WORDPRESS_DB_HOST --allow-root --extra-php <<PHP
     /* Enable SSL */
     define('FORCE_SSL_ADMIN', true);
 
@@ -17,15 +17,15 @@ wp config create --dbname=wordpress --dbuser=wordpress --dbpass=wordpress --dbho
 PHP
 
 wp core install --url="localhost" \
-                    --title="My Site" \
-                    --admin_user="admin" \
-                    --admin_password="admin" \
+                    --title="$WORDPRESS_TITLE" \
+                    --admin_user="$WORDPRESS_ADMIN_USER" \
+                    --admin_password="$WORDPRESS_ADMIN_PASSWORD" \
                     --admin_email="admin@example.com" \
                     --skip-email \
                     --allow-root --path=/var/www/html
 
 # Activate custom theme
-wp theme activate home-improvement --allow-root --path=/var/www/html
+wp theme activate $WORDPRESS_THEME --allow-root --path=/var/www/html
 
 # Start Apache in the foreground
 exec "$@"

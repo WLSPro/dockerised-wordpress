@@ -17,6 +17,7 @@ services:
       WORDPRESS_TITLE: 'My Wordpress Site'
       WORDPRESS_ADMIN_USER: admin
       WORDPRESS_ADMIN_PASSWORD: admin
+      WORDPRESS_THEME: twentytwentyfour
       WORDPRESS_CONFIG_EXTRA: |
         /* Enable SSL */
         define('FORCE_SSL_ADMIN', true);
