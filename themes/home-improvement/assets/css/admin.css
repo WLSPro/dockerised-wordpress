@@ -1,0 +1,123 @@
+.home-improvement-notice {
+    position: relative;
+}
+
+.home-improvement-notice .notice-dismiss {
+    text-decoration: none;
+}
+
+.home-improvement-notice .notice-content {
+    display: flex;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.home-improvement-notice .notice-content a {
+    text-decoration: none;
+}
+
+.home-improvement-notice .notice-cta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.edit-post-meta-boxes-area .postbox-header {
+    background: #eaeaea;
+    margin-bottom: 30px;
+}
+
+.home-improvement-metabox .form-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.home-improvement-metabox .form-group label {
+    font-weight: 600;
+    width: 150px;
+}
+
+/* CUSTOMIZER KIRKI RADIO IMAGE */
+.customize-control-kirki-radio-image .image label>img {
+    display: block;
+}
+
+/* CUSTOMIZER MESSAGE BOX */
+.hi-upsell-message {
+    background-color: #fff;
+    padding: 20px 15px;
+    box-shadow: 3px 5px 6px 0 #ddd;
+}
+
+.hi-upsell-message h3 {
+    margin-top: 0;
+}
+
+.hi-upsell-message .hi-upsell__img {
+    margin-bottom: 10px;
+    border: 1px solid rgb(221 221 221 / 50%);
+    padding: 10px 2px;
+    box-shadow: 0 2px 5px 2px rgb(66 94 166 / 15%);
+    text-align: center;
+}
+
+.hi-upsell-message .hi-upsell__feat-list li {
+    position: relative;
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.hi-upsell-message .hi-upsell__feat-list li:last-child {
+    margin-bottom: 0;
+}
+
+.hi-upsell-message .hi-upsell__feat-list li::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 3px;
+    width: 5px;
+    height: 5px;
+    background-color: #053762;
+    border-radius: 50%;
+}
+
+.hi-upsell__btn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.hi-upsell__btn .btn,
+.hi-upsell__btn .btn:nth-child(odd) {
+    background-color: #ffcd3a;
+    color: #111;
+    padding: 10px 20px;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.hi-upsell__btn .btn:nth-child(even) {
+    background-color: #0665b5;
+    color: #fff;
+}
+
+.hi-upsell__btn .btn:hover,
+.hi-upsell__btn .btn:nth-child(odd):hover {
+    background-color: #0665b5;
+    color: #fff;
+}
+
+.hi-upsell__btn .btn:nth-child(even):hover {
+    background-color: #ffcd3a;
+    color: #111;
+}

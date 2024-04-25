@@ -26,8 +26,6 @@ services:
       - wordpress_data:/var/www/html
       - ./themes:/var/www/html/wp-content/themes
       - ./wp-autoconfig.sh:/usr/local/bin/wp-autoconfig.sh
-    entrypoint: /usr/local/bin/wp-autoconfig.sh
-    command: docker-entrypoint.sh apache2-foreground
     depends_on:
       - db
     networks:
