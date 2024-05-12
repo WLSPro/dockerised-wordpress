@@ -38,7 +38,7 @@ services:
     image: nginx:alpine
     volumes:
       - ./nginx:/etc/nginx/conf.d
-      - ./certs:/etc/nginx/certs
+      - /etc/letsencrypt/live/reepl.ai:/etc/nginx/certs
       - wordpress_data:/var/www/html
     ports:
       - "443:443"
