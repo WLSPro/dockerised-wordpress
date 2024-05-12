@@ -34,21 +34,6 @@ services:
     networks:
       - wordpress_net
 
-  nginx:
-    image: nginx:alpine
-    volumes:
-      - ./nginx:/etc/nginx/conf.d
-      - ./certs:/etc/nginx/certs
-      - wordpress_data:/var/www/html
-    ports:
-      - "443:443"
-    depends_on:
-      - wordpress
-    links:
-      - wordpress
-    networks:
-      - wordpress_net
-
   db:
     image: mariadb:latest
     environment:
